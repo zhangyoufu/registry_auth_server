@@ -1,0 +1,8 @@
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  packages: write
+jobs:
+  build-docker-image:
+    uses: zhangyoufu/actions/.github/workflows/build-docker-image.yml@master
