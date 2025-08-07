@@ -6,7 +6,7 @@ require (
 	github.com/goccy/go-yaml v1.18.0
 	github.com/ory/ladon v1.3.0
 	github.com/zhangyoufu/registry_auth v0.0.0-20250423050302-b3c87db1c8ed
-	golang.org/x/crypto v0.40.0
+	golang.org/x/crypto v0.41.0
 )
 
 require (
