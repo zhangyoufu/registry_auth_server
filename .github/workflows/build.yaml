@@ -1,0 +1,35 @@
+on:
+  push:
+    branches: master
+  workflow_dispatch:
+concurrency: build
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - uses: zhangyoufu/actions/build-oci-image@main
+      with:
+        cross-arch-emulation: false
+        platform: |-
+          linux/386
+          linux/amd64
+          linux/amd64/v2
+          linux/amd64/v3
+          linux/amd64/v4
+          linux/arm/v5
+          linux/arm/v6
+          linux/arm/v7
+          linux/arm64
+          linux/arm64/v9
+          linux/mips
+          linux/mips64
+          linux/ppc64
+          linux/ppc64le
+          linux/s390x
+          linux/riscv64
+          linux/loong64
+        push: true
